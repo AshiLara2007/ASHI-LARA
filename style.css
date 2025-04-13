@@ -101,6 +101,35 @@ header a:hover{
     color: #7e00d2;
 }
 
+.button-box2{
+    position:relative;
+    margin-left: 25px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #00aaa7, #7f42a7, #6600c5, #1f2b9c,#2a46ff, #0099ff, #00aaa7);
+    background-size: 200%;
+    animation: animationGradient 2.5s linear infinite;
+    clip-path: polygon(0 0, 82% 0, 100% 34%, 100% 80%, 100% 99%, 0 100%, 0% 80%, 0% 20%);
+}
+
+@keyframes animationGradient{
+    to{
+        background-position: 200%;
+    }
+}
+
+.button-box2 button{
+    position: absolute;
+    inset: 3px 3px 3px 3px;
+    border: none;
+    background-color: rgb(14 12 21);
+    color: lightgray;
+    border-radius: 10px;
+    clip-path: polygon(0 0, 82% 0, 100% 34%, 100% 80%, 100% 99%, 0 100%, 0% 80%, 0% 20%);
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
 .hero{
     position: relative;
     display: flex;
@@ -338,8 +367,102 @@ header a:hover{
     }
 }
 
-/* CLOSE SIGNIN PAGE OPEN */
-.closeSignin{
+/* Sign In Page2 */
+.signin-page2-box{
+    position: fixed;
+    top: 60%;
+    width: 30%;
+    height: 60vh;
+    scale: 0;
+    filter: blur(10px);
+    z-index: 2000;
+    margin-left: 32.5%;
+}
+
+.signin-page2{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(14 12 21);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.484);
+    border-radius: 20px;
+}
+
+.signin-page2 h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.signin-page2 input{
+    padding: 7.5px 30px;
+    background-color: lightgray;
+    width: 60%;
+    height: 35px;
+    border: none;
+    outline: none;
+    clip-path: polygon(0 0, 93% 0, 100% 43%, 100% 80%, 100% 99%, 0 100%, 0% 80%, 0% 20%);
+    border-radius: 5px;
+    margin-bottom: 5%;
+}
+
+.signin-page2 button{
+    width: 280px;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: #7e00d2;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.signin-page2 p{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 40px;
+    font-size: 20px;
+    font-weight: 700;
+    background-color: gray;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+.signin-page2 div{
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    font-size: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signin-page2 div:hover{
+    opacity: 0.7;
+}
+
+/* OPEN SIGNIN2 PAGE */
+.openSignin2{
+    animation: openSigninAnimation 0.7s forwards;
+}
+
+@keyframes openSigninAnimation{
+    to{
+        filter: blur(0);
+        scale: 1;
+        top: 25%;
+    }
+}
+
+/* CLOSE SIGNIN2 PAGE OPEN */
+.closeSignin2{
     animation: closeSigninAnimation 0.7s forwards;
 }
 
@@ -355,6 +478,7 @@ header a:hover{
         top: 60%;
     }
 }
+
 
 /* COMPANIES SECTION */
 .hero h4{
@@ -563,7 +687,7 @@ header a:hover{
     margin-top: 0;
 }
 
-.chatApp-section .left-container .button-box{
+.chatApp-section .left-container .button-box2{
     margin: 0;
     margin-top: 40px;
     width: 130px;
@@ -1215,10 +1339,6 @@ footer .box-icons a:hover{
 }
 
 
-
-
-
-
 /* TABLET RESPONSIVE */
 @media screen and (max-width: 1200px){
     header{
@@ -1276,6 +1396,8 @@ footer .box-icons a:hover{
         max-width: 1000px;
         margin-left: 10%;
     }
+
+    
 
     .generative-section .grid-box{
         display: flex;
@@ -1585,3 +1707,4 @@ footer .box-icons a:hover{
 .hero button{
     top: 32%;
 }
+
