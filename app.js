@@ -39,3 +39,20 @@ closeButton.addEventListener("click", function(){
     sideBar.classList.remove('open-sidebar')
     sideBar.classList.add('close-sidebar')
 })
+
+
+// SIGNIN PAGE2 OPEN AND CLOSE ANIMATION
+
+const signinButton2 = document.getElementById('signinButton2');
+const signinPage2 = document.getElementById('signinPage2');
+const closeIcon2= document.getElementById('closeIcon2');
+
+signinButton2.addEventListener('click', function(){
+    signinPage2.classList.remove('closeSignin');
+    signinPage2.classList.add("openSignin")
+});
+
+closeIcon2.addEventListener('click', function(){
+    signinPage2.classList.remove("openSignin");
+    signinPage2.classList.add('closeSignin');
+})
